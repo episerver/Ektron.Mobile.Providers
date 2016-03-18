@@ -94,6 +94,7 @@ namespace Mobile.Providers.FiftyOneDegrees
         public EkDeviceInfo GetDeviceInfo(string userAgent)
         {
             EkDeviceInfo retval = null;
+            if (string.IsNullOrEmpty(userAgent)) return ConvertDeviceInfo((Profile)null);
             if (!privateCache.TryGetValue(userAgent, out retval))
             {
                 using (DataSet ds = StreamFactory.Create(filename, false))
