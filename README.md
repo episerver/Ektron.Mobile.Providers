@@ -3,7 +3,7 @@
 This solution contains providers to allow the Ektron CMS to consume device detection capabilities. It contains:
  * A provider for the 51Degrees(TM) library by 51Degrees.mobi.
 
-##DEPENDENCIES
+##DEPENDENCIES:
 This package relies on the public 51Degrees(TM) package from Nuget, as well as Ektron CMS version 9.0 or later.
 
 ##BUILD:
