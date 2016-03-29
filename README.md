@@ -3,6 +3,9 @@
 This solution contains providers to allow the Ektron CMS to consume device detection capabilities. It contains:
  * A provider for the 51Degrees(TM) library by 51Degrees.mobi.
 
+##DEPENDENCIES:
+This package relies on the public 51Degrees(TM) package from Nuget, as well as Ektron CMS version 9.0 or later.
+
 ##BUILD:
 Building this solution requires that you have access to the Ektron.Cms.Common and Ektron.Cms.Contracts dll for your installed version. By default, the hintpath in this project is set to look in your program files installation for the Ektron version 9.1 DLLs. If you are building for a different version, you will need to point the references at the DLLs for your specific version.
 
