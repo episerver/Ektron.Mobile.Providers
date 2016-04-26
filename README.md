@@ -29,30 +29,40 @@ Some of the capabilities that the Ektron Device detection relies on are unavaila
 
 ##INSTALL:
 
- 1) Copy the following files from the Mobile.Providers.51Degrees\bin\Debug or Mobile.Providers.51Degrees\bin\Release folder to the bin folder in your website
-         *Mobile.Providers.FiftyOneDegrees.dll
-         *FiftyOne.Foundation.dll
-         *Microsoft.Web.Infrastructure.dll
- 2) Get the latest version from the 51Degrees website or copy the following files from the Mobile.Providers.51Degrees\App_Data folder to the App_Data folder in your website, or 
-         *51Degrees.dat
- 3) Modify the ektron.cms.framework.unity.config file in the root of your website
-    Find the following line:
+###Prerequisite step:
+Follow the **BUILD** instructions above to build the project against your currently installed version of Ektron.
 
-	<typeAlias alias="BusinessObjects.IDeviceInfoProvider" type="Ektron.Cms.Mobile.WURFLProvider, Ektron.Cms.Mobile"/>
-	
-	and change the type mapping to match the following:
-    
-	<typeAlias alias="BusinessObjects.IDeviceInfoProvider" type="Mobile.Providers.FiftyOneDegrees.FiftyOneDegreesProvider, Mobile.Providers.FiftyOneDegrees"/>
- 
- 4) Modify the web.config in your website, and find the configuration/appSettings section. Add the following key to it
+###Step 1
+Copy the following files from the `Mobile.Providers.51Degrees\bin\Debug` or `Mobile.Providers.51Degrees\bin\Release` folder to the bin folder in your Ektron website:
+  * Mobile.Providers.FiftyOneDegrees.dll
+  * FiftyOne.Foundation.dll
+  * Microsoft.Web.Infrastructure.dll
 
- 	<add key="51DegreesLocation" value="{location of dat file}"/>
+###Step 2
+Get the latest version from the 51Degrees website or copy the following files from the Mobile.Providers.51Degrees\App_Data folder to the App_Data folder in your website, or 
+  * 51Degrees.dat
 
-	Replace the {location of dat file} with the location and name of your dat file, for example:
+###Step 3
+Modify the `ektron.cms.framework.unity.config` file in the root of your website. Find the following line:
+```xml
+<typeAlias alias="BusinessObjects.IDeviceInfoProvider" type="Ektron.Cms.Mobile.WURFLProvider, Ektron.Cms.Mobile"/>
+```
+and change the type mapping to match the following:
+```xml
+<typeAlias alias="BusinessObjects.IDeviceInfoProvider" type="Mobile.Providers.FiftyOneDegrees.FiftyOneDegreesProvider, Mobile.Providers.FiftyOneDegrees"/>
+```
 
-	<add key="51DegreesLocation" value="~/App_Data/51Degrees.dat"/>
-
- 5) In the configuration/appSettings section, make sure that:
-    "ek_EnableDeviceDetection" is set to "true":
-
-    <add key="ek_EnableDeviceDetection" value="true"/>
+###Step 4
+Modify the web.config in your website, and find the configuration/appSettings section. Add the following key to it
+```xml
+<add key="51DegreesLocation" value="{location of dat file}"/>
+```
+Replace the {location of dat file} with the location and name of your dat file, for example:
+```xml
+<add key="51DegreesLocation" value="~/App_Data/51Degrees.dat"/>
+```
+###Step 5
+In the Web.config `appSettings` section, make sure that: `ek_EnableDeviceDetection` is set to "true":
+```xml
+<add key="ek_EnableDeviceDetection" value="true"/>
+```
