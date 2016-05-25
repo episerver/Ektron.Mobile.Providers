@@ -42,7 +42,7 @@ Get the latest version from the 51Degrees website or copy the following files fr
   * 51Degrees.dat
 
 ###Step 2a
-Only for version 8.7, copy the workarea folder to the website, preserving the folder structure so that the files overwrite the existing files.
+On version 8.6 and 8.7, copy the workarea folder to the website, preserving the folder structure so that the files overwrite the existing files.
 
 ###Step 3
 ### Version 9.0 and 9.1:
@@ -54,7 +54,7 @@ and change the type mapping to match the following:
 ```xml
 <typeAlias alias="BusinessObjects.IDeviceInfoProvider" type="Mobile.Providers.FiftyOneDegrees.FiftyOneDegreesProvider, Mobile.Providers.FiftyOneDegrees"/>
 ```
-### Version 8.7:
+### Version 8.6 and 8.7:
 Modify the `ektron.cms.framework.unity.config` file in the root of your website. Find the following line:
 ```xml
 <typeAlias alias="BusinessObjects.IWURFLProvider" type="Ektron.Cms.Mobile.WURFLProvider, Ektron.Cms.Mobile"/>

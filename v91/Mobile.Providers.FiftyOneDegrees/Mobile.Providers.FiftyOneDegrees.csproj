@@ -31,10 +31,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ektron.Cms.Common">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Ektron\CMS400v91\bin\Ektron.Cms.Common.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Ektron\CMS400v91\bin\Ektron.Cms.Common.dll</HintPath>
     </Reference>
     <Reference Include="Ektron.Cms.Contracts">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Ektron\CMS400v91\bin\Ektron.Cms.Contracts.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Ektron\CMS400v91\bin\Ektron.Cms.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="FiftyOne.Foundation, Version=3.2.7.3, Culture=neutral, PublicKeyToken=e0b3a8da0bbce49c, processorArchitecture=MSIL">
       <HintPath>..\packages\51Degrees.mobi.3.2.7-beta\lib\NET40\FiftyOne.Foundation.dll</HintPath>
